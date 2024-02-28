@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.banner {
+  background-image: url("../images/banner.png");
+  height: 100vh;
+  width: 100%;
+}
+.raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+.inter{
+  font-family: "Inter", sans-serif;
+}
