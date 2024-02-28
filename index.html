@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>F-Ticket</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primery: '#1DD100',
+                            'primery-40': '#1DD10066',
+                            'primery-10': '#1DD1001A',
+                            't-primery': '#030712',
+                            't-secondary': '#03071299',
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body class="raleway" data-theme="light" class="text-primary">
+        <header class="w-4/5 mx-auto pt-12">
+            <div class="navbar bg-base-100 text-t-primery">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a class="text-xl text-t-secondary font-medium">Home</a></li>
+                            <li><a class="text-xl text-t-secondary font-medium">About</a></li>
+                            <li><a class="text-xl text-t-secondary font-medium">Destination</a></li>
+                            <li><a class="text-xl text-t-secondary font-medium">Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-4xl font-extrabold ">F-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="text-xl text-t-secondary font-medium">Home</a></li>
+                        <li><a class="text-xl text-t-secondary font-medium">About</a></li>
+                        <li><a class="text-xl text-t-secondary font-medium">Destination</a></li>
+                        <li><a class="text-xl text-t-secondary font-medium">Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a
+                        class="flex rounded-xl border space-x-2 bg-primery-10 border-primery-40 px-8 text-primery cursor-pointer  py-4 text-xl font-bold text-center"><span>Bus</span>
+                        <img class="aspect-square" src="./images/bus-icon.png" alt="Bus Icone"></a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- -------------Hero section -->
+            <section
+                class="container banner bg-center bg-no-repeat mx-auto flex flex-col justify-center items-center -mt-8">
+                <div class="text-center mt-28">
+                    <h1 class="text-6xl font-extrabold text-white leading-[5.375rem]">End-to-End Travel with <br><span
+                            class="text-primery"> F Paribahan</span></h1>
+                    <p class="text-white inter text-xl font-normal w-3/5 mx-auto mt-4">Yes, you can run unit tests and
+                        view the results directly within the app. The integrated testing features allow for a
+                        streamlined .</p>
+                    <button class="bg-primery py-5 px-7 mt-8 rounded-xl text-xl font-bold">Buy Tickets</button>
+                </div>
+                <div class="mt-20 flex gap-6">
+                    <div class="inter border-b-4 border-primery rounded-3xl bg-white py-8 pl-8 flex pr-[3.31rem]">
+                        <img src="./images/people.png" alt="people icone">
+                        <div class="ml-4">
+                            <h1 class="font-bold text-4xl">500K+</h1>
+                            <p class="text-t-secondary text-lg">Registered users</p>
+                        </div>
+                    </div>
+                    <div class="inter border-b-4 border-primery rounded-3xl bg-white py-8 pl-8 flex pr-[3.31rem]">
+                        <img src="./images/ticket-cupon.png" alt="people icone">
+                        <div class="ml-4">
+                            <h1 class="font-bold text-4xl">1.7 lacks</h1>
+                            <p class="text-t-secondary text-lg">Tickets sold</p>
+                        </div>
+                    </div>
+                    <div class="inter border-b-4 border-primery rounded-3xl bg-white py-8 pl-8 flex pr-[3.31rem]">
+                        <img src="./images/stoppage.png" alt="people icone">
+                        <div class="ml-4">
+                            <h1 class="font-bold text-4xl">80K+</h1>
+                            <p class="text-t-secondary text-lg">Rental partners</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- -------------Best Offer Section -->
+            <section class="container mx-auto mt-28 text-center">
+                <h1 class="font-bold text-4xl">Best offers for you</h1>
+                <div class="mt-12 flex justify-center flex-wrap w-4/5 gap-6 items-center mx-auto">
+                    <!-- Frist oner -->
+                    <div class="bg-[#FFBF0F] flex  h-52 w-[35.81rem] justify-center items-center rounded-3xl">
+                        <div class="p-12 inter space-y-1 text-start">
+                            <h1 class="font-black text-4xl">15% OFF</h1>
+                            <p class="text-xl font-semibold">on your next purchase</p>
+                            <p class="font-medium text-lg text-t-secondary">use by January 2024</p>
+                        </div>
+                        <img src="./images/cupon-devider.png" class="h-52" alt="Divider">
+                        <div class="space-x-1">
+                            <h2 class="font-bold text-3xl">NEW15</h2>
+                            <pclass="font-medium text-lg text-t-secondary">Coupon Code</p>
+                        </div>
+                    </div>
+                    <!-- Second one -->
+                    <div class="bg-[#F78C9C] flex  h-52 w-[35.81rem] justify-center items-center rounded-3xl">
+                        <div class="p-12 inter space-y-1 text-start">
+                            <h1 class="font-black text-4xl">20% OFF</h1>
+                            <p class="text-xl font-semibold">on your next purchase</p>
+                            <p class="font-medium text-lg text-t-secondary">use by January 2024</p>
+                        </div>
+                        <img src="./images/cupon-devider.png" class="h-52" alt="Divider">
+                        <div class=" pr-9 space-x-1">
+                            <h2 class="font-bold text-3xl">Couple 20</h2>
+                            <pclass="font-medium text-lg text-t-secondary">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-14"><button class="text-primery border border-primery py-[1.31rem] px-[1.88rem] rounded-xl text-xl font-bold">See All Offers</button></div>
+            </section>
+            <section>
+                <h1>sd</h1>
+                <h1>sd</h1>
+                <h1>sd</h1>
+                <h1>sd</h1>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+</html>
