@@ -28,7 +28,7 @@ submitBtn.addEventListener('click', function (event) {
         event.preventDefault();
     }
     else {
-
+        event.preventDefault();
         successPage.classList.remove('hidden');
     }
 });
