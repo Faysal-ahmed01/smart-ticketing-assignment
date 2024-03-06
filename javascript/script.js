@@ -1,20 +1,110 @@
 const seats = document.querySelectorAll('.seat span');
-const coupons = document.getElementsByClassName('coupon');
 const seatLists = document.getElementById('seatLists');
+
+const couponInput = document.getElementById('couponInput');
+const couponBtn = document.getElementById('coupon-btn');
+const couponDiv = document.getElementById('coupon-div');
+
+const nameIn = document.getElementById('name').value;
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+
+const successPage = document.getElementById('success-page');
+
+
+
+const coupons = document.getElementsByClassName('coupon');
 const couponsArray = [];
-
-console.log(seatLists);
-
-
-
-for(coupon of coupons){
-    couponsArray.push(coupon.innerText);
+for (coupon of coupons) {
+    couponsArray.push(coupon.innerText.toLowerCase());
 }
 
 
-for(seat of seats){
-    seat.addEventListener('click', function(){
-        this.classList.toggle('click');
+
+const submitBtn = document.getElementById('submit-btn');
+submitBtn.disabled = true;
+submitBtn.addEventListener('click', function (event) {
+    successPage.classList.remove('hidden');
+});
+
+
+
+
+const ticketPrice = parseInt(document.getElementById('ticket-price').innerText);
+
+let count = 0;
+let total = 0;
+let Gtotal = 0;
+let offer = 0;
+
+
+
+
+//-----------seat click event----------------//
+for (seat of seats) {
+    seat.addEventListener('click', function () {
+        if (this.classList.contains('click')) {
+            this.classList.remove('click');
+            removeChildById(this.innerText);
+            count--;
+        } else {
+            this.classList.add('click');
+            seatLists.appendChild(addChild(this.innerText));
+            count++;
+        }
+        total = count * ticketPrice;
+        setInnerTextById('count', count);
+        setInnerTextById('total', total);
+        coupunImpliment();
+        if (count > 0) {
+            submitBtn.disabled = false;
+        } else {        
+            submitBtn.disabled = true;
+        }
+
     })
 }
 
+
+// -----------coupon impliment----------------//
+function coupunImpliment() {
+    Gtotal = total;
+    couponInput.addEventListener('keyup', function () {
+        if (couponsArray.includes(couponInput.value.toLowerCase())) {
+            couponBtn.disabled = false;
+            couponBtn.addEventListener('click', function () {
+                offer = 0.2;
+                Gtotal = total - (total * offer);
+                setInnerTextById('Gtotal', Gtotal);
+                couponDiv.style.display = 'none';
+            })
+
+        } else {
+            Gtotal = total;
+        }
+    });
+    Gtotal = total - (total * offer);
+    setInnerTextById('Gtotal', Gtotal);
+
+}
+
+
+function addChild(seatName) {
+    let li = document.createElement('li');
+    li.classList.add('flex', 'justify-between', 'items-center', 'w-full');
+    li.innerHTML = `<p>${seatName}</p><p>Economy</p><p>${ticketPrice}</p>`;
+    li.id = seatName;
+    return li;
+}
+
+
+function removeChildById(seatName) {
+    let li = document.getElementById(seatName);
+    li.remove();
+}
+
+
+function setInnerTextById(id, text) {
+    let li = document.getElementById(id);
+    li.innerText = text;
+}

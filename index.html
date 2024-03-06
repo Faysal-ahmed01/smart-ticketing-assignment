@@ -71,7 +71,7 @@
                 <div class="navbar-end">
                     <a
                         class="flex rounded-xl border space-x-2 bg-primery-10 border-primery-40 px-8 text-primery cursor-pointer  py-4 text-xl font-bold text-center"><span>Bus</span>
-                        <img class="aspect-square" src="./images/bus-icon.png" alt="Bus Icone"></a>
+                        <img class="aspect-square" src="./images/bus-icon.png" alt="Bus Icon"></a>
                 </div>
             </div>
         </header>
@@ -89,21 +89,21 @@
                 </div>
                 <div class="mt-20 flex gap-6">
                     <div class="inter border-b-4 border-primery rounded-3xl bg-white py-8 pl-8 flex pr-[3.31rem]">
-                        <img src="./images/people.png" alt="people icone">
+                        <img src="./images/people.png" alt="people icon">
                         <div class="ml-4">
                             <h1 class="font-bold text-4xl">500K+</h1>
                             <p class="text-t-secondary text-lg">Registered users</p>
                         </div>
                     </div>
                     <div class="inter border-b-4 border-primery rounded-3xl bg-white py-8 pl-8 flex pr-[3.31rem]">
-                        <img src="./images/ticket-cupon.png" alt="people icone">
+                        <img src="./images/ticket-cupon.png" alt="people icon">
                         <div class="ml-4">
                             <h1 class="font-bold text-4xl">1.7 lacks</h1>
                             <p class="text-t-secondary text-lg">Tickets sold</p>
                         </div>
                     </div>
                     <div class="inter border-b-4 border-primery rounded-3xl bg-white py-8 pl-8 flex pr-[3.31rem]">
-                        <img src="./images/stoppage.png" alt="people icone">
+                        <img src="./images/stoppage.png" alt="people icon">
                         <div class="ml-4">
                             <h1 class="font-bold text-4xl">80K+</h1>
                             <p class="text-t-secondary text-lg">Rental partners</p>
@@ -116,10 +116,10 @@
             <section class="container mx-auto mt-28 text-center">
                 <h1 class="font-bold text-4xl">Best offers for you</h1>
                 <div class="mt-12 flex justify-center flex-wrap  gap-6 items-center mx-auto">
-                    <!-- Frist oner -->
+                    <!-- First one -->
                     <div class="bg-[#FFBF0F] flex  h-52 w-[35.81rem] items-center rounded-3xl">
                         <div class="ml-12 inter space-y-1 text-start">
-                            <h1 class="font-black text-4xl">20% OFF</h1>
+                            <h1 class="font-black text-4xl">15% OFF</h1>
                             <p class="text-xl font-semibold">on your next purchase</p>
                             <p class="font-medium text-lg text-t-secondary">use by January 2024</p>
                         </div>
@@ -151,10 +151,12 @@
             <section
                 class="border-2 border-b-0 border-l-0 border-r-0 border-primery rounded-t-[5.5rem] bg-[#F7F8F8] mt-28 pb-28">
                 <!-- Header part -->
-                <div class="mt-28 text-center">
+                <div class="mt-28 text-center ">
                     <h1 class="font-bold text-4xl">F Paribahan</h1>
-                    <p class="text-lg text-t-secondary inter mt-6">Yes, you can run unit tests and view the results
-                        directly within the app. The integrated <br>testing features allow for a streamlined .</p>
+                    <p class="text-lg text-t-secondary inter mx-auto mt-6 w-3/5">F Poribohon is the leading name in the
+                        logistics and transportation industry. With our unparalleled service, we ensure timely delivery
+                        and utmost care for your goods. Our integrated testing features allow for a streamlined process,
+                        ensuring that our services are always up to the mark.</p>
                 </div>
                 <!-- bus Ticket -->
                 <div class="bg-white rounded-3xl w-[73.125rem] h-[26.125rem] flex  items-center mx-auto relative mt-12">
@@ -166,7 +168,7 @@
                                     src="./images/bus-logo.png" alt="BUS LOGO">
                                 <div>
                                     <h1 class="font-bold text-3xl">Greenline Paribahan</h1>
-                                    <p class="inter text-t-secondary text-lg mt-3">Coach-009-WEB ! AC_Business</p>
+                                    <p class="inter text-t-secondary text-lg mt-3">Coach-009-Economy ! AC_Business</p>
                                 </div>
                             </div>
                             <div
@@ -203,7 +205,7 @@
                     <img class="relative ml-8" src="./images/info-devider.png" alt="divider">
                     <div class="flex flex-col ml-6 justify-center items-center "><!-- Tk  -->
                         <img src="./images/fare.png" alt="">
-                        <h1 class="text-3xl font-bold">550 Taka</h1>
+                        <h1 class="text-3xl font-bold"><span id="ticket-price">550</span> Taka</h1>
                         <p class="font-medium text-2xl text-t-secondary">Per Seat</p>
                     </div>
                 </div>
@@ -243,7 +245,7 @@
                             </div>
                             <div class="flex gap-16">
                                 <div class="seat grid grid-cols-2 gap-x-8 gap-y-6">
-                                    <span class="click">A1</span> <span>A2</span>
+                                    <span class="">A1</span> <span>A2</span>
                                     <span>B1</span> <span>B2</span>
                                     <span>C1</span> <span>C2</span>
                                     <span>D1</span> <span>D2</span>
@@ -279,7 +281,7 @@
                                 <div class="flex gap-1">
                                     <h2>Seat</h2>
                                     <div class=" bg-primery rounded-xl px-2 text-white">
-                                        <p>2</p>
+                                        <p id="count">0</p>
                                     </div>
                                 </div>
                                 <h2>Class</h2>
@@ -287,39 +289,72 @@
                             </div>
                             <hr class="border-dashed border-[#03071233] mt-4 mb-4">
                             <div>
-                                <ul  class="space-y-4 font-normal text-t-secondary" id="seatLists">
-                                    <li  class="flex justify-between items-center w-full"><p>C2</p><p>Economoy</p><p>550</p></li>
-                                    <li  class="flex justify-between items-center font-normal text-t-secondary w-full"><p>C2</p><p>Economoy</p><p>550</p></li>
+                                <ul class="space-y-4 font-normal text-t-secondary" id="seatLists">
+                                    <!-- <li  class="flex justify-between items-center w-full"><p>C2</p><p>Economoy</p><p>550</p></li>
+                                    <li  class="flex justify-between items-center font-normal text-t-secondary w-full"><p>C2</p><p>Economoy</p><p>550</p></li> -->
                                 </ul>
                             </div>
                             <hr class="border border-[#03071233] mt-4 mb-4">
                             <div class="flex justify-between items-center font-medium text-t-primery">
                                 <h2>Total Price</h2>
-                                <h2>BDT 1100</h2>
+                                <h2>BDT <span id="total">0</span></h2>
                             </div>
-                            <div class="flex bg-white rounded-xl items-center justify-around mt-4 mb-6"><input class="bg-white text-t-secondary inter text-sm p-5 focus:text-t-primery" type="text" placeholder="Have any copupon?"> <button class="bg-primery rounded-md  px-5 h-10 font-semibold text-base text-white disabled:bg-primery-40"  disabled>Apply</button></div>
-                           
+                            <div class="flex bg-white rounded-xl items-center justify-around mt-4 mb-6" id="coupon-div">
+                                <input class="bg-white text-t-secondary inter text-sm p-5 focus:text-t-primery"
+                                    type="text" placeholder="Have any coupon?" id="couponInput"> <button
+                                    class="bg-primery rounded-md  px-5 h-10 font-semibold text-base text-white disabled:bg-primery-40"
+                                    disabled id="coupon-btn">Apply</button>
+                            </div>
+
                             <div class="flex justify-between items-center font-medium text-t-primery">
                                 <h2>Grand Total</h2>
-                                <h2>BDT 1100</h2>
+                                <h2>BDT <span id="Gtotal">0</span></h2>
                             </div>
                         </div>
                         <form action="">
-                        <div class="mt-6">
-                        <label class="inter font-semibold text-t-primery text-base" for="name">Passenger Name*</label>
-                        <input class="w-full bg-white border border-[#0307121A] p-5 rounded-xl inter mt-4" type="text" name="name" id="name" placeholder="Enter your name" required></div>
-                        <div class="mt-6">
-                        <label class="inter font-semibold text-t-primery text-base mt-6" for="phone">Phone Number*</label>
-                        <input class="w-full bg-white border border-[#0307121A] p-5 rounded-xl inter mt-4" type="text" name="phone" id="phone" placeholder="Enter your phone number" required></div>
-                        <div class="mt-6">
-                        <label class="inter font-semibold text-t-primery text-base mt-6" for="email">Email ID</label>
-                        <input class="w-full bg-white border border-[#0307121A] p-5 rounded-xl inter mt-4" type="text" name="email" id="email" placeholder="Enter your email id"></div>
-                        <input type="submit" value="Next" class="bg-primery text-white py-5 px-7 rounded-2xl w-full text-xl font-extrabold mt-6"></input></form>
-                        <div class="flex justify-around items-center text-t-secondary mt-6"><a class="border-b border-t-secondary" href="#">Cancellation Policy</a><a class="border-b border-t-secondary" href="#">Cancellation Policy</a></div>
+                            <div class="mt-6">
+                                <label class="inter font-semibold text-t-primery text-base" for="name">Passenger
+                                    Name*</label>
+                                <input class="w-full bg-white border border-[#0307121A] p-5 rounded-xl inter mt-4"
+                                    type="text" name="name" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="mt-6">
+                                <label class="inter font-semibold text-t-primery text-base mt-6" for="phone">Phone
+                                    Number*</label>
+                                <input class="w-full bg-white border border-[#0307121A] p-5 rounded-xl inter mt-4"
+                                    type="text" name="phone" id="phone" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="mt-6">
+                                <label class="inter font-semibold text-t-primery text-base mt-6" for="email">Email
+                                    ID</label>
+                                <input class="w-full bg-white border border-[#0307121A] p-5 rounded-xl inter mt-4"
+                                    type="text" name="email" id="email" placeholder="Enter your email id">
+                            </div>
+                            <input type="submit" value="Next"
+                                class="bg-primery text-white py-5 px-7 rounded-2xl w-full text-xl font-extrabold mt-6"
+                                id="submit-btn"></input>
+                        </form>
+                        <div class="flex justify-around items-center text-t-secondary mt-6"><a
+                                class="border-b border-t-secondary" href="#">Cancellation Policy</a><a
+                                class="border-b border-t-secondary" href="#">Cancellation Policy</a></div>
                     </div>
                 </div>
-                
 
+
+            </section>
+            <section
+                class="w-screen h-screen flex justify-center items-center bg-[#F2F1F1] fixed top-0 left-0 raleway hidden"
+                id="success-page">
+                <div class="bg-white px-20 py-14 text-center flex flex-col justify-center items-center rounded-2xl">
+                    <img src="./images/success.png" alt="">
+                    <h1 class="font-bold text-2xl text-[#27AE60] mt-9">SUCCESS</h1>
+                    <h1 class="font-medium text-xl mt-9 text-t-primery">Thank you for Booking Our Bus Seats. <br>
+                        We are working hard to find the best service and deals for you.</h1>
+                    <h2 class="font-light text-xl">Shortly you will find a confirmation in your email.</h2>
+                    <a href="index.html">
+                        <button
+                            class="bg-[#27AE60] rounded-3xl py-[0.97rem] px-24 mt-5 font-semibold text-xl text-white">Continue</button></a>
+                </div>
             </section>
         </main>
         <footer class="bg-[#030712] text-white py-28 px-32 ">
