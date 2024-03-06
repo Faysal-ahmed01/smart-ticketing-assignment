@@ -7,7 +7,6 @@ const couponDiv = document.getElementById('coupon-div');
 
 const nameIn = document.getElementById('name').value;
 const email = document.getElementById('email');
-const phone = document.getElementById('phone');
 
 const successPage = document.getElementById('success-page');
 
@@ -22,13 +21,27 @@ for (coupon of coupons) {
 
 
 const submitBtn = document.getElementById('submit-btn');
-submitBtn.disabled = true;
+
 submitBtn.addEventListener('click', function (event) {
-    successPage.classList.remove('hidden');
+    const phone = document.getElementById('phone');
+    if (phone.value == '' || count < 1) {
+        event.preventDefault();
+    }
+    else {
+
+        successPage.classList.remove('hidden');
+    }
 });
 
 
 
+
+
+
+
+
+
+let seatNumber = parseInt(document.getElementById('seat-number').innerText);
 
 const ticketPrice = parseInt(document.getElementById('ticket-price').innerText);
 
@@ -43,24 +56,27 @@ let offer = 0;
 //-----------seat click event----------------//
 for (seat of seats) {
     seat.addEventListener('click', function () {
+
+
+
         if (this.classList.contains('click')) {
             this.classList.remove('click');
             removeChildById(this.innerText);
             count--;
+            seatNumber++;
         } else {
-            this.classList.add('click');
-            seatLists.appendChild(addChild(this.innerText));
-            count++;
+            if (count < 4) {
+                this.classList.add('click');
+                seatLists.appendChild(addChild(this.innerText));
+                count++;
+                seatNumber--;
+            }
         }
         total = count * ticketPrice;
         setInnerTextById('count', count);
+        setInnerTextById('seat-number', seatNumber);
         setInnerTextById('total', total);
         coupunImpliment();
-        if (count > 0) {
-            submitBtn.disabled = false;
-        } else {        
-            submitBtn.disabled = true;
-        }
 
     })
 }
@@ -73,7 +89,16 @@ function coupunImpliment() {
         if (couponsArray.includes(couponInput.value.toLowerCase())) {
             couponBtn.disabled = false;
             couponBtn.addEventListener('click', function () {
-                offer = 0.2;
+                if (couponInput.value.toLowerCase() == 'new15') {
+                    offer = 0.15;
+                }
+                else if (couponInput.value.toLowerCase() == 'couple 20') {
+                    offer = 0.20;
+                }
+                else {
+                    offer = 0;
+                }
+                console.log(offer);
                 Gtotal = total - (total * offer);
                 setInnerTextById('Gtotal', Gtotal);
                 couponDiv.style.display = 'none';
