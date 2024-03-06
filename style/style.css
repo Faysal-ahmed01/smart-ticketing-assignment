@@ -12,3 +12,21 @@
 .inter{
   font-family: "Inter", sans-serif;
 }
+.seat span{
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #03071280;
+  padding: 1.06rem 2.75rem  ;
+  background-color: #F7F8F8;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+.click{
+  background-color: #1DD100 !important;
+  color:#FFFFFF !important;
+}
+.line > p{
+  padding: 1.06rem 0rem  ;
+  font-size: 1.125rem;
+  color: #03071280;
+}
